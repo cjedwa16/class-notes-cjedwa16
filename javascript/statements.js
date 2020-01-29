@@ -4,7 +4,7 @@
 const pi = 3.14;
 
 // Printing
-console.log(pi)
+console.log(pi);
 
 // For loop
 for (let x = 0; x < 3; x++){
