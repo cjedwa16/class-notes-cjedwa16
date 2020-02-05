@@ -3,10 +3,12 @@
 //console.log(odds);
 
 
-const filter1 = function(array, transform)  {
+const filter1 = function(array, filterer)  {
   copy = [];
   for (const element of array)  {
-    copy.push(transform(element));
+    if (transform(element) === true)  {
+      copy.push(transform(element));
+    }
   }
   return copy;
 }
