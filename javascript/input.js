@@ -3,7 +3,7 @@
 const readline = require('readline')  // import statement
 
 // Console configuration
-const user = realine.createInterface({
+const user = readine.createInterface({
   input: process.stdin,
   output: process.stdout
 });
