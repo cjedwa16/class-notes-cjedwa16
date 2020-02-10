@@ -38,7 +38,7 @@ mongoose.connection.dropDatabase(function()  {
     torrey.save(function(error)  {
       if (error) console.error(error.stack);
 
-      lee.save();
+      lee.save(function(error)  {
       if (error) console.error(error.stack);
 
       // Disconnect
