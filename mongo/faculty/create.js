@@ -30,9 +30,9 @@ const lee = new Professor({
 
 // Reset the data
 mongoose.connection.dropDatabase()
-  .then(() => return harcourt.save())
-  .then(() => return torrey.save())
-  .then(() => return lee.save())
+  .then(() => harcourt.save())
+  .then(() => torrey.save())
+  .then(() => lee.save())
   .then(() => mongoose.connection.close())
   .then(() => console.log('Database is ready.'))
   .catch(error => console.error(error.stack));
