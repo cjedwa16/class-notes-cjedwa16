@@ -40,4 +40,5 @@ Promise.all(queries)
     console.log('Started in 2003: ', results[2].map(p => p.name));
     console.log('Teaches 362: ', results[3].map(p => p.name));
     console.log('Distinct ranks: ', results[4]);
+    mongoose.connection.close();
   }).catch(error => console.error(error.stack));
