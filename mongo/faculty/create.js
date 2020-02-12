@@ -28,7 +28,7 @@ const lee = new Professor({
   courses: [140, 219, 256, 321, 370]
 });
 
-// Delete any previous data
+// Reset the data
 mongoose.connection.dropDatabase()
   .then(() => return harcourt.save())
   .then(() => return torrey.save())
