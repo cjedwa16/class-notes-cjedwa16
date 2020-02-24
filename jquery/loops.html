@@ -16,6 +16,7 @@
     <script>
       // Number of times the form has been submited
       let counter = 0;
+      
       // Respond to submit events
       $('form').on('submit', function(event)  {
         const form = $(this);  // JQuery ibject representing the form
@@ -33,7 +34,7 @@
           input.val('');  // reset the fields so user doesnt have to erase whats in there after every submit
         }
         counter++;
-        const p = $(`<p>Submit #${counter}</p>`); 
+        const p = $(`<p>Submit #${counter}</p>`);
 
         // Add to the page
         $('#history').append(p);
