@@ -21,10 +21,20 @@ app.get('/', function(request, response)  {
       <li><a href="/cakes">Cakes</a></li>
       <li><a href=/pies">Pies</a></li>
     </ul>
-    `)
-})
+    `);
+});
 
+// Handle undefined routes
+app.use(function(request, response, next)  {
+  console.log('Replied with 404');
+  response.status(404).end();
+});
 
+// Handle other errors
+app.use(function(error, request, response, next)  {
+  console.error(error.stack);
+  response.status(500).send(error.message);
+});
 
 
 
