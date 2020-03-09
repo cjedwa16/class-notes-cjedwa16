@@ -20,7 +20,7 @@ router.get('/:id', function(request, response, next)  {
   if (request.params.id === 'vanilla')  {  // if you visit the vanilla link then
     response.send('Apple pies');
   } else if(request.params.id === 'chocolate')  {
-    response.send('Cherry cakes');
+    response.send('Cherry pies');
   }  else  {
     next();  // Pass on this request
   }
