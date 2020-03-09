@@ -1,8 +1,8 @@
-// Router for pie requests
+// Router for pie-related requests
 const express = require('express');
 
 // Create the router
-const router = express.Router()
+const router = express.Router();
 
 // Pretend database collection
 const pies = [
@@ -10,22 +10,22 @@ const pies = [
   {id: 'cherry', flavor: 'Cherry'}
 ];
 
-// cs-linuxlab-40.stlawu.edu:3000/pies/
-router.get('/', function(request, response)  {
+// cs-linuxlab-##.stlawu.edu:3000/pies/
+router.get('/', function(request, response) {
   response.render('pies/index', {pies: pies});
 });
 
-// cs-linuxlab-40.stlawu.edu:3000/pies/id
-router.get('/:id', function(request, response, next)  {
+// cs-linuxlab-##.stlawu.edu:3000/pies/id
+router.get('/:id', function(request, response, next) {
 
-    // Pretend database lookup
-    const pies = pies.find(pie => pies.id === request.params.id);
+  // Pretend database lookup
+  const pie = pies.find(pie => pie.id === request.params.id);
 
-    if (!pie) {
-      next(); // Pass on this request
-    } else {
-      response.render('pies/detail', {pie: pie});
-    }
+  if (!pie) {
+    next(); // Pass on this request
+  } else {
+    response.render('pies/detail', {pie: pie});
+  }
 });
 
 module.exports = router;
