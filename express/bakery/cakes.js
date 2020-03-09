@@ -10,7 +10,7 @@ router.get('/', function(request, response)  {
     <h1>Cakes</h1>
     <ul>
       <li><a href="/cakes/vanilla">Vanilla</a></li>
-      <li><a href="/cakes/chocolate">Vanilla</a></li>
+      <li><a href="/cakes/chocolate">Chocolate</a></li>
     </ul>
     `);
 });
