@@ -12,13 +12,13 @@ let flowers = [
 
 // GET /flowers
 router.get('/', function(request, response) {
-  if (request.query.color)  {
-    response.send(flowers.filter(f=> f.color === request.query.color));
-  } else if  {
-    response.send(flowers.filter(f=> f.season === request.query.season));
-  } else  {
-  response.send(flowers);
-}
+  if (request.query.color) {
+    response.send(flowers.filter(f => f.color === request.query.color));
+  } else if (request.query.season) {
+    response.send(flowers.filter(f => f.season === request.query.season));
+  } else {
+    response.send(flowers);
+  }
 });
 
 // GET /flowers/id
