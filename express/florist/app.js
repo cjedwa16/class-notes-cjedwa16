@@ -1,7 +1,7 @@
 // Florist web server
 const express = require('express');
 
-// Create the server
+// Create the server 
 const app = express();
 
 // Use a view engine
